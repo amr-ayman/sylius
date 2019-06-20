@@ -1,0 +1,157 @@
+/* App Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Tajawal:400,700&display=swap&subset=arabic");
+/* App Icons */
+@import url("https://cdn.materialdesignicons.com/3.6.95/css/materialdesignicons.min.css");
+/* App colors */
+/* Screen Sizes */
+body {
+  overflow: hidden;
+  min-width: 320px;
+  font-family: "Lato", sans-serif; }
+
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+/* Header Styles Start Here*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: #F5F5F5; }
+  header .brand {
+    width: 150px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url("../images/sylius-logo.png"); }
+    header .brand:hover {
+      cursor: pointer; }
+    header .brand:focus {
+      outline: none; }
+  header .main-menu {
+    margin: 30px 0; }
+    header .main-menu .nav-menu {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      align-items: center; }
+      header .main-menu .nav-menu .menu-item + .menu-item {
+        margin-left: 15px; }
+      header .main-menu .nav-menu .menu-item .menu-link {
+        color: #2C2C2B;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 8px 10px;
+        border-radius: 5px;
+        display: inline-block; }
+        header .main-menu .nav-menu .menu-item .menu-link:hover {
+          text-decoration: none; }
+      header .main-menu .nav-menu .menu-item.active .menu-link {
+        color: #FFFFFF;
+        background-color: #269B80; }
+      header .main-menu .nav-menu .menu-item:hover {
+        cursor: pointer; }
+      header .main-menu .nav-menu .menu-item:focus {
+        outline: none; }
+    @media only screen and (min-width: 768px) {
+      header .main-menu {
+        margin: 0; } }
+  header .options {
+    width: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    header .options .cart {
+      color: #FFC15A;
+      font-size: 21px; }
+      header .options .cart .mdi {
+        position: relative; }
+        header .options .cart .mdi:after {
+          content: attr(data-number);
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          top: -8px;
+          right: 15px;
+          padding: 1px;
+          color: #FFFFFF;
+          font-size: 0.6rem;
+          background: #3FB398;
+          border-radius: 50%;
+          box-sizing: content-box;
+          font-family: Arial, serif;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+      header .options .cart:hover {
+        cursor: pointer; }
+    header .options .lang {
+      font-family: "Tajawal", sans-serif; }
+      header .options .lang a {
+        color: #269B80;
+        text-decoration: none; }
+    header .options .user .dropdown {
+      margin-right: 15px; }
+      header .options .user .dropdown .name.dropdown-toggle::after {
+        position: absolute;
+        top: 45%;
+        right: -15px; }
+      header .options .user .dropdown .dropdown-menu.show {
+        margin-top: 14px;
+        margin-left: 17px; }
+        @media only screen and (min-width: 768px) {
+          header .options .user .dropdown .dropdown-menu.show {
+            margin-top: 22px;
+            margin-left: -60px; } }
+    header .options .user:hover {
+      cursor: pointer; }
+  @media only screen and (min-width: 768px) {
+    header {
+      flex-direction: row; } }
+
+/* Main Section Styles Start Here*/
+main {
+  flex-grow: 1;
+  display: flex; }
+  main section {
+    flex-grow: 1;
+    padding: 20px 15px;
+    position: relative;
+    background-color: #FFFFFF; }
+    main section .page-wrapper .list-title {
+      font-size: 28px;
+      font-weight: 700; }
+
+/* Footer Styles Start Here*/
+footer {
+  background: #0F6D54; }
+  footer p {
+    margin: 0;
+    color: #FFFFFF;
+    padding: 14px 0;
+    text-align: center; }
+    footer p a {
+      color: #FFFFFF; }
+      footer p a:hover {
+        color: #3FB398;
+        text-decoration: none; }
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+  font-family: "Tajawal", sans-serif;
+  /* Header Styles Start Here*/ }
+  .rtl header .main-menu .nav-menu .menu-item + .menu-item {
+    margin-left: 0;
+    margin-right: 15px; }
+  .rtl header .options .cart .mdi:after {
+    right: -10px; }
+  .rtl header .options .user .dropdown .dropdown-menu.show {
+    margin-left: 0; }
+
+/*# sourceMappingURL=ar-styles.css.map */

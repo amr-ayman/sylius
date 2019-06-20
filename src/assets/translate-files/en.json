@@ -1,0 +1,12 @@
+{
+  "header": {
+    "lang": "العربية",
+    "profile": "My Profile",
+    "logout": "Logout"
+  },
+  "menu": {
+    "collection": "Collection",
+    "about": "About",
+    "contact": "Contact"
+  }
+}

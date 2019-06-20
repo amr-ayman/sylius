@@ -1,0 +1,194 @@
+@import "variables";
+@import "mixins";
+
+body {
+  overflow: hidden;
+  min-width: 320px;
+  font-family: $font-primary;
+}
+
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles Start Here*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: $off-white;
+
+  .brand {
+    width: 150px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url("../images/sylius-logo.png");
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .main-menu {
+    margin: 30px 0;
+    .nav-menu {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      .menu-item {
+        + .menu-item {
+          margin-left: 15px;
+        }
+        .menu-link {
+          color: $dark-gray;
+          font-size: 14px;
+          font-weight: 700;
+          padding: 8px 10px;
+          border-radius: 5px;
+          display: inline-block;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        &.active {
+          .menu-link {
+            color: $white;
+            background-color: $medium-green;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    @include medium-screen {
+      margin: 0;
+    }
+  }
+
+  .options {
+    width: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .cart {
+      color: $orange;
+      font-size: 21px;
+      .mdi {
+        position: relative;
+        &:after {
+          content: attr(data-number);
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          top: -8px;
+          right: 15px;
+          padding: 1px;
+          color: $white;
+          font-size: 0.6rem;
+          background: $light-green;
+          border-radius: 50%;
+          box-sizing: content-box;
+          font-family: Arial, serif;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .lang {
+      font-family: $font-secondary;
+
+      a {
+        color: $medium-green;
+        text-decoration: none;
+      }
+    }
+
+    .user {
+      .dropdown {
+        margin-right: 15px;
+        .name {
+          &.dropdown-toggle::after {
+            position: absolute;
+            top: 45%;
+            right: -15px;
+          }
+        }
+        .dropdown-menu {
+          &.show {
+            margin-top: 14px;
+            margin-left: 17px;
+            @include medium-screen {
+              margin-top: 22px;
+              margin-left: -60px;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  @include medium-screen {
+    flex-direction: row;
+  }
+}
+
+/* Main Section Styles Start Here*/
+main {
+  flex-grow: 1;
+  display: flex;
+
+  section {
+    flex-grow: 1;
+    padding: 20px 15px;
+    position: relative;
+    background-color: $white;
+
+    .page-wrapper {
+      .list-title {
+        font-size: 28px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+/* Footer Styles Start Here*/
+footer {
+  background: $dark-green;
+  p {
+    margin: 0;
+    color: $white;
+    padding: 14px 0;
+    text-align: center;
+    a {
+      color: $white;
+      &:hover {
+        color: $light-green;
+        text-decoration: none;
+      }
+    }
+  }
+}

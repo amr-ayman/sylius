@@ -1,0 +1,12 @@
+{
+  "header": {
+    "lang": "English",
+    "profile": "الملف الشخصى",
+    "logout": "تسجيل الخروج"
+  },
+  "menu": {
+    "collection": "المنتجات",
+    "about": "من نحن",
+    "contact": "إتصل بنا"
+  }
+}

@@ -1,0 +1,35 @@
+<header>
+  <div class="brand" routerLink="/collection"></div>
+  <nav class="main-menu">
+    <ul class="nav-menu">
+      <li class="menu-item"  routerLinkActive="active" routerLink="/collection">
+        <a class="menu-link" href="javascript:"> {{'menu.collection' | translate}}</a>
+      </li>
+      <li class="menu-item"  routerLinkActive="active" routerLink="/about">
+        <a class="menu-link" href="javascript:">{{'menu.about' | translate}}</a>
+      </li>
+      <li class="menu-item" routerLinkActive="active" routerLink="/contact">
+        <a class="menu-link" href="javascript:">{{'menu.contact' | translate}}</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="options">
+    <div class="cart">
+      <span class="mdi mdi-cart" [attr.data-number]="cartItems"></span>
+    </div>
+    <div class="lang">
+      <a href="javascript:" (click)="changeLang()">{{'header.lang' | translate}}</a>
+    </div>
+    <div class="user">
+      <div ngbDropdown>
+        <div class="name" id="userDropdown" ngbDropdownToggle>
+          Amr Ayman
+        </div>
+        <div ngbDropdownMenu aria-labelledby="userDropdown">
+          <button ngbDropdownItem>{{'header.profile' | translate}}</button>
+          <button ngbDropdownItem>{{'header.logout' | translate}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

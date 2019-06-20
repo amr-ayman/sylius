@@ -1,0 +1,37 @@
+@import "en-styles";
+.rtl {
+  direction: rtl;
+  text-align: right;
+  font-family: $font-secondary;
+  /* Header Styles Start Here*/
+  header {
+    .main-menu {
+      .nav-menu {
+        .menu-item {
+          + .menu-item {
+            margin-left: 0;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+    .options {
+      .cart {
+        .mdi {
+          &:after {
+            right: -10px;
+          }
+        }
+      }
+      .user {
+        .dropdown {
+          .dropdown-menu {
+            &.show {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
