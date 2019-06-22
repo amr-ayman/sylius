@@ -5,15 +5,15 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HeaderComponent, LayoutComponent} from './components';
 import {RouterModule} from '@angular/router';
-import { SidebarComponent } from './components/main-layout/sidebar/sidebar.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { FooterComponent } from './components/main-layout/footer/footer.component';
+import {FooterComponent} from './components/main-layout/footer/footer.component';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {ApiRequestInterceptor} from './services/http/base-api-intrceptor';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     LayoutComponent,
-    SidebarComponent,
     FooterComponent
   ],
   imports: [
@@ -34,10 +34,12 @@ import { FooterComponent } from './components/main-layout/footer/footer.componen
     LayoutComponent
   ],
   providers: [
-    TranslateService
+    TranslateService,
+    {provide: HTTP_INTERCEPTORS, useClass: ApiRequestInterceptor, multi: true}
   ]
 })
-export class CoreModule {}
+export class CoreModule {
+}
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/translate-files/', '.json');
