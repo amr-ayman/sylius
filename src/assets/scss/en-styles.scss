@@ -312,6 +312,34 @@ main {
           margin: 0 auto;
         }
       }
+      /* Shopping Cart Page Styles Start Here*/
+      .table {
+        margin: 25px 0;
+        thead {
+          background-color: $medium-green;
+          th {
+            color: $white;
+            border: 2px solid $medium-green;
+          }
+        }
+        img {
+          width: 65px;
+          border-radius: 50%;
+        }
+        .details {
+          display: flex;
+          flex-direction: column;
+          .name {
+            font-weight: 700;
+          }
+        }
+      }
+      .clear {
+        .reset-cart {
+          color: $white;
+          background-color: $red;
+        }
+      }
     }
   }
 }

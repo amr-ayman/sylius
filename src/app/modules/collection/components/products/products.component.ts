@@ -33,11 +33,11 @@ export class ProductsComponent implements OnInit {
   getCollection() {
     this.api.getAllProducts().subscribe(data => {
       this.collection = data;
-      this.checkInCart()
+      this.checkInCart();
     });
   }
 
-  // Check Product Quantity In Cart
+  // Check Products Quantity In Cart
   checkInCart() {
     const cartItems = this.cart.getCartItems();
     this.collection.map(x => {

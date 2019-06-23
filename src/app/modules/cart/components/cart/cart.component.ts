@@ -15,10 +15,10 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.userCart = this.cart.getCartItems();
-    console.log(this.userCart);
   }
 
-  test() {
+  clearCart() {
     this.cart.resetCart();
+    this.userCart = [];
   }
 }

@@ -42,5 +42,13 @@
   "messages": {
     "success": "تم بنجاح",
     "contact": "أفحص رسالتك فى الـ Console"
+  },
+  "cart": {
+    "cart": "سلة المشتريات",
+    "product": "المنتج",
+    "quantity": "الكمية",
+    "price": "السعر",
+    "resetCart": "أفرغ السلة",
+    "message": "السلة فارغة"
   }
 }

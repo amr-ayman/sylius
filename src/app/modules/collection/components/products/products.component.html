@@ -34,7 +34,7 @@
               <p class="card-text">{{product.description}}</p>
               <div class="card-action">
                 <p class="card-price">{{product.price | currency:'USD':'symbol'}}</p>
-                <button type="button" class="btn add-to-cart" *ngIf="product.quantity ===0" (click)="addToCart(product)">
+                <button type="button" class="btn add-to-cart" *ngIf="product.quantity === 0" (click)="addToCart(product)">
                   {{'products.addToCart' | translate}}
                 </button>
                 <div class="cart-action" *ngIf="product.quantity > 0">

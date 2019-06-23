@@ -9,7 +9,18 @@
             <p class="card-text">{{product.description}}</p>
             <div class="card-action">
               <p class="card-price">{{product.price | currency:'USD':'symbol'}}</p>
-              <a href="javascript:" class="btn add-to-cart" (click)="addToCart(product)">{{'products.addToCart' | translate}}</a>
+              <button type="button" class="btn add-to-cart" *ngIf="product.quantity === 0" (click)="addToCart(product)">
+                {{'products.addToCart' | translate}}
+              </button>
+              <div class="cart-action" *ngIf="product.quantity > 0">
+                <button type="button" class="btn add" (click)="addToCart(product)">
+                  <span class="mdi mdi-plus"></span>
+                </button>
+                <span class="quantity">{{product.quantity}}</span>
+                <button type="button" class="btn remove" (click)="removeFromCart(product)">
+                  <span class="mdi mdi-minus"></span>
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -28,7 +28,20 @@ export class CartService {
 
   getCartItems() {
     const existingCart = this.getOrCreateCart();
-    return existingCart.products;
+    const filteredCart = [];
+    existingCart.products.map(x => {
+      if (x.quantity !== 1) {
+        x.quantity = 1;
+        filteredCart.push(x);
+      } else {
+        filteredCart.map(y => {
+          if (x.id === y.id) {
+            y.quantity += 1;
+          }
+        });
+      }
+    });
+    return filteredCart;
   }
 
   addToCart(product) {

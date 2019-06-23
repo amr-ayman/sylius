@@ -42,5 +42,13 @@
   "messages": {
     "success": "Success",
     "contact": "Your message logged to console"
+  },
+  "cart": {
+    "cart": "Shopping Cart",
+    "product": "Product",
+    "quantity": "Quantity",
+    "price": "Price",
+    "resetCart": "Clear Cart",
+    "message": "Your cart is empty."
   }
 }
