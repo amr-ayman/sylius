@@ -14,8 +14,8 @@
     </ul>
   </nav>
   <div class="options">
-    <div class="cart">
-      <span class="mdi mdi-cart" [attr.data-number]="cartItems"></span>
+    <div class="cart" routerLink="/cart">
+      <span class="mdi mdi-cart" [attr.data-number]="cartItems" [class.full]="cartItems>0"></span>
     </div>
     <div class="lang">
       <a href="javascript:" (click)="changeLang()">{{'header.lang' | translate}}</a>

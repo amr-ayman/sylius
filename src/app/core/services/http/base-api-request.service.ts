@@ -5,7 +5,8 @@ import {SyliusAPIResponse} from './sylius-response';
 import {BrowserStorageService} from '../browser-storage.service';
 import {LoaderService} from '../loader.service';
 import {catchError} from "rxjs/operators";
-import {throwError} from "rxjs";
+import {Observable, throwError} from "rxjs";
+import {Product} from "../../interfaces/collection.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -34,5 +35,11 @@ export class ApiRequestService {
 
   private handleHttpError(error: HttpErrorResponse) {
     return throwError(error);
+  }
+
+  getAllProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>('assets/data/sylius-data.json').pipe(
+      catchError(error => this.handleHttpError(error))
+    );
   }
 }

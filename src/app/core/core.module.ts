@@ -9,6 +9,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FooterComponent} from './components/main-layout/footer/footer.component';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {ApiRequestInterceptor} from './services/http/base-api-intrceptor';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -27,7 +29,13 @@ import {ApiRequestInterceptor} from './services/http/base-api-intrceptor';
         deps: [HttpClient]
       }
     }),
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-bottom-left',
+      preventDuplicates: true,
+    })
   ],
   exports: [
     HeaderComponent,

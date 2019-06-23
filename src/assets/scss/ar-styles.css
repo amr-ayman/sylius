@@ -1,157 +1,86 @@
-/* App Fonts */
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Tajawal:400,700&display=swap&subset=arabic");
-/* App Icons */
-@import url("https://cdn.materialdesignicons.com/3.6.95/css/materialdesignicons.min.css");
-/* App colors */
-/* Screen Sizes */
-body {
-  overflow: hidden;
-  min-width: 320px;
-  font-family: "Lato", sans-serif; }
+/*
+Error: File to import not found or unreadable: ~ngx-toastr/toastr.
+        on line 23 of _variables.scss
+        from line 1 of en-styles.scss
+        from line 1 of ar-styles.scss
 
-.layout {
-  height: 100vh;
-  display: flex;
-  flex-direction: column; }
+18:     .options {
+19:       .cart {
+20:         .mdi {
+21:           &:after {
+22:             right: -10px;
+23:           }
+24:         }
+25:       }
+26:       .user {
+27:         .dropdown {
+28:           .dropdown-menu {
 
-/* Header Styles Start Here*/
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 30px;
-  background-color: #F5F5F5; }
-  header .brand {
-    width: 150px;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-image: url("../images/sylius-logo.png"); }
-    header .brand:hover {
-      cursor: pointer; }
-    header .brand:focus {
-      outline: none; }
-  header .main-menu {
-    margin: 30px 0; }
-    header .main-menu .nav-menu {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      display: flex;
-      align-items: center; }
-      header .main-menu .nav-menu .menu-item + .menu-item {
-        margin-left: 15px; }
-      header .main-menu .nav-menu .menu-item .menu-link {
-        color: #2C2C2B;
-        font-size: 14px;
-        font-weight: 700;
-        padding: 8px 10px;
-        border-radius: 5px;
-        display: inline-block; }
-        header .main-menu .nav-menu .menu-item .menu-link:hover {
-          text-decoration: none; }
-      header .main-menu .nav-menu .menu-item.active .menu-link {
-        color: #FFFFFF;
-        background-color: #269B80; }
-      header .main-menu .nav-menu .menu-item:hover {
-        cursor: pointer; }
-      header .main-menu .nav-menu .menu-item:focus {
-        outline: none; }
-    @media only screen and (min-width: 768px) {
-      header .main-menu {
-        margin: 0; } }
-  header .options {
-    width: 215px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    header .options .cart {
-      color: #FFC15A;
-      font-size: 21px; }
-      header .options .cart .mdi {
-        position: relative; }
-        header .options .cart .mdi:after {
-          content: attr(data-number);
-          position: absolute;
-          width: 15px;
-          height: 15px;
-          top: -8px;
-          right: 15px;
-          padding: 1px;
-          color: #FFFFFF;
-          font-size: 0.6rem;
-          background: #3FB398;
-          border-radius: 50%;
-          box-sizing: content-box;
-          font-family: Arial, serif;
-          font-weight: bold;
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-      header .options .cart:hover {
-        cursor: pointer; }
-    header .options .lang {
-      font-family: "Tajawal", sans-serif; }
-      header .options .lang a {
-        color: #269B80;
-        text-decoration: none; }
-    header .options .user .dropdown {
-      margin-right: 15px; }
-      header .options .user .dropdown .name.dropdown-toggle::after {
-        position: absolute;
-        top: 45%;
-        right: -15px; }
-      header .options .user .dropdown .dropdown-menu.show {
-        margin-top: 14px;
-        margin-left: 17px; }
-        @media only screen and (min-width: 768px) {
-          header .options .user .dropdown .dropdown-menu.show {
-            margin-top: 22px;
-            margin-left: -60px; } }
-    header .options .user:hover {
-      cursor: pointer; }
-  @media only screen and (min-width: 768px) {
-    header {
-      flex-direction: row; } }
-
-/* Main Section Styles Start Here*/
-main {
-  flex-grow: 1;
-  display: flex; }
-  main section {
-    flex-grow: 1;
-    padding: 20px 15px;
-    position: relative;
-    background-color: #FFFFFF; }
-    main section .page-wrapper .list-title {
-      font-size: 28px;
-      font-weight: 700; }
-
-/* Footer Styles Start Here*/
-footer {
-  background: #0F6D54; }
-  footer p {
-    margin: 0;
-    color: #FFFFFF;
-    padding: 14px 0;
-    text-align: center; }
-    footer p a {
-      color: #FFFFFF; }
-      footer p a:hover {
-        color: #3FB398;
-        text-decoration: none; }
-
-.rtl {
-  direction: rtl;
-  text-align: right;
-  font-family: "Tajawal", sans-serif;
-  /* Header Styles Start Here*/ }
-  .rtl header .main-menu .nav-menu .menu-item + .menu-item {
-    margin-left: 0;
-    margin-right: 15px; }
-  .rtl header .options .cart .mdi:after {
-    right: -10px; }
-  .rtl header .options .user .dropdown .dropdown-menu.show {
-    margin-left: 0; }
-
-/*# sourceMappingURL=ar-styles.css.map */
+Backtrace:
+_variables.scss:23
+en-styles.scss:1
+ar-styles.scss:1
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/import_node.rb:44:in `import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:325:in `map'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:325:in `map'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:88:in `block in with_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:88:in `with_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/exec/sass_scss.rb:387:in `run'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/exec/base.rb:50:in `parse'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/lib/sass/exec/base.rb:18:in `parse!'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.3/bin/sass:13:in `<top (required)>'
+C:/Ruby25-x64/bin/sass:23:in `load'
+C:/Ruby25-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ~ngx-toastr/toastr.\A         on line 23 of _variables.scss\A         from line 1 of en-styles.scss\A         from line 1 of ar-styles.scss\A \A 18:     .options {\A 19:       .cart {\A 20:         .mdi {\A 21:           &:after {\A 22:             right: -10px;\A 23:           }\A 24:         }\A 25:       }\A 26:       .user {\A 27:         .dropdown {\A 28:           .dropdown-menu {"; }

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 11,
+    "category": "Mug",
+    "name": "Small Mug",
+    "description": "Cool small mug with variant colors.",
+    "price": 5,
+    "image": "assets/images/products/mug/small.jpg"
+  },
+  {
+    "id": 12,
+    "category": "Mug",
+    "name": "Medium Mug",
+    "description": "Cool medium mug with variant colors.",
+    "price": 10,
+    "image": "assets/images/products/mug/medium.jpg"
+  },
+  {
+    "id": 13,
+    "category": "Mug",
+    "name": "Large Mug",
+    "description": "Cool large mug with variant colors.",
+    "price": 15,
+    "image": "assets/images/products/mug/large.jpg"
+  },
+  {
+    "id": 21,
+    "category": "T-shirt",
+    "name": "Small T-shirt",
+    "description": "Cool small T-shirt with variant colors.",
+    "price": 25,
+    "image": "assets/images/products/t-shirt/small.jpg"
+  },
+  {
+    "id": 22,
+    "category": "T-shirt",
+    "name": "Medium T-shirt",
+    "description": "Cool medium T-shirt with variant colors.",
+    "price": 30,
+    "image": "assets/images/products/t-shirt/medium.jpg"
+  },
+  {
+    "id": 23,
+    "category": "T-shirt",
+    "name": "Large T-shirt",
+    "description": "Cool large T-shirt with variant colors.",
+    "price": 35,
+    "image": "assets/images/products/t-shirt/large.jpg"
+  },
+  {
+    "id": 31,
+    "category": "Sticker",
+    "name": "Black Sticker",
+    "description": "Cool black sticker with variant designs.",
+    "price": 1,
+    "image": "assets/images/products/sticker/black.jpg"
+  },
+  {
+    "id": 32,
+    "category": "Sticker",
+    "name": "Colored Sticker",
+    "description": "Cool colored sticker with variant designs.",
+    "price": 3,
+    "image": "assets/images/products/sticker/colored.jpg"
+  },
+  {
+    "id": 33,
+    "category": "Sticker",
+    "name": "3D Sticker",
+    "description": "Cool 3D sticker with variant designs.",
+    "price": 5,
+    "image": "assets/images/products/sticker/3d.jpg"
+  },
+  {
+    "id": 41,
+    "category": "Book",
+    "name": "Leaving Time",
+    "description": "By Jodi Picoult.",
+    "price": 10,
+    "image": "assets/images/products/book/leaving-time.jpg"
+  },
+  {
+    "id": 42,
+    "category": "Book",
+    "name": "Silent Scream",
+    "description": "By Angela Marsons.",
+    "price": 20,
+    "image": "assets/images/products/book/silent-scream.jpg"
+  },
+  {
+    "id": 43,
+    "category": "Book",
+    "name": "The Martian",
+    "description": "By Andy Weir.",
+    "price": 30,
+    "image": "assets/images/products/book/the-martian.jpg"
+  }
+]

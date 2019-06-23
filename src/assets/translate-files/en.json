@@ -8,5 +8,39 @@
     "collection": "Collection",
     "about": "About",
     "contact": "Contact"
+  },
+  "filter": {
+    "all": "All",
+    "book": "Book",
+    "mug": "Mug",
+    "sticker": "Sticker",
+    "tShirt": "T-shirt"
+  },
+  "products": {
+    "addToCart": "Add To Cart"
+  },
+  "about": {
+    "header": "About Us",
+    "dummy": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "vision": "Vision",
+    "mission": "Mission"
+  },
+  "contact": {
+    "header": "Have query in mind?",
+    "fullName": "Full Name",
+    "nameRequired": "Full Name is required",
+    "email": "Email",
+    "emailRequired": "Email is required",
+    "emailNotValid": "Please Enter Valid Email",
+    "subject": "Subject",
+    "subjectRequired": "Subject is required",
+    "message": "Message",
+    "messageRequired": "Message is required",
+    "send": "Send",
+    "sendMessage": "Thanks, your message has been set!"
+  },
+  "messages": {
+    "success": "Success",
+    "contact": "Your message logged to console"
   }
 }

@@ -1,0 +1,19 @@
+<div class="page-wrapper">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 offset-md-3 offset-lg-4">
+      <div class="product">
+        <div class="card" *ngIf="product">
+          <img class="card-img-top" [src]="product.image" [alt]="product.name">
+          <div class="card-body">
+            <h4 class="card-title">{{product.name}}</h4>
+            <p class="card-text">{{product.description}}</p>
+            <div class="card-action">
+              <p class="card-price">{{product.price | currency:'USD':'symbol'}}</p>
+              <a href="javascript:" class="btn add-to-cart" (click)="addToCart(product)">{{'products.addToCart' | translate}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

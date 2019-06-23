@@ -1,8 +1,10 @@
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {CollectionRoutingModule} from './collection-routing.module';
-import {CollectionComponent} from './components';
+import {ProductsComponent} from './components';
 import {SharedModule} from '../../shared/shared.module';
+import { ProductComponent } from './components/product/product.component';
+import {CollectionComponent} from "./components/collection.component";
 
 @NgModule({
   imports: [
@@ -11,7 +13,9 @@ import {SharedModule} from '../../shared/shared.module';
     SharedModule
   ],
   declarations: [
-    CollectionComponent
+    CollectionComponent,
+    ProductsComponent,
+    ProductComponent
   ],
   providers: []
 })

@@ -1,0 +1,59 @@
+<div class="page-wrapper">
+  <div class="row">
+    <div class="col-sm-12 col-md-2 products-filter">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a href="javascript:" class="nav-link" [class.active]="productsFilter === ''"
+             (click)="filterProducts('')">{{'filter.all' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:" class="nav-link" [class.active]="productsFilter === 'Book'"
+             (click)="filterProducts('Book')">{{'filter.book' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:" class="nav-link" [class.active]="productsFilter === 'Mug'"
+             (click)="filterProducts('Mug')">{{'filter.mug' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:" class="nav-link" [class.active]="productsFilter === 'Sticker'"
+             (click)="filterProducts('Sticker')">{{'filter.sticker' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a href="javascript:" class="nav-link" [class.active]="productsFilter === 'T-shirt'"
+             (click)="filterProducts('T-shirt')">{{'filter.tShirt' | translate}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-12 col-md-10 products">
+      <div class="row" *ngIf="collection.length > 0">
+        <div *ngFor="let product of collection | filterProducts:productsFilter" class="col-sm-12 col-md-6 col-lg-3 product">
+          <div class="card">
+            <img class="card-img-top" [src]="product.image" [alt]="product.name">
+            <div class="card-body">
+              <h4 class="card-title" (click)="viewProduct(product.id)">{{product.name}}</h4>
+              <p class="card-text">{{product.description}}</p>
+              <div class="card-action">
+                <p class="card-price">{{product.price | currency:'USD':'symbol'}}</p>
+                <button type="button" class="btn add-to-cart" *ngIf="product.quantity ===0" (click)="addToCart(product)">
+                  {{'products.addToCart' | translate}}
+                </button>
+                <div class="cart-action" *ngIf="product.quantity > 0">
+                  <button type="button" class="btn add" (click)="addToCart(product)">
+                    <span class="mdi mdi-plus"></span>
+                  </button>
+                  <span class="quantity">{{product.quantity}}</span>
+                  <button type="button" class="btn remove" (click)="removeFromCart(product)">
+                    <span class="mdi mdi-minus"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" *ngIf="!collection.length">
+        <p>Sorry, No Products Available</p>
+      </div>
+    </div>
+  </div>
+</div>

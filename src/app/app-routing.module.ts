@@ -10,6 +10,7 @@ const appRoutes: Routes = [
       {path: 'collection', loadChildren: './modules/collection/collection.module#CollectionModule'},
       {path: 'about', loadChildren: './modules/about/about.module#AboutModule'},
       {path: 'contact', loadChildren: './modules/contact/contact.module#ContactModule'},
+      {path: 'cart', loadChildren: './modules/cart/cart.module#CartModule'},
       {path: '', redirectTo: '/collection', pathMatch: 'full'}
     ]
   }
